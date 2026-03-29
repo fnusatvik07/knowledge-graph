@@ -55,3 +55,4 @@ projects/02-intermediate-graph-rag/ragtest/
 website/node_modules/
 website/dist/
 website/.next/
+workshop/notebooks/lightrag_storage/
