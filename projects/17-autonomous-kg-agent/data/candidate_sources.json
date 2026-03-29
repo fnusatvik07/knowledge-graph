@@ -1,0 +1,62 @@
+[
+  {
+    "id": "src_001",
+    "title": "Neural Network Architectures for NLP",
+    "text": "Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks were the dominant architectures for natural language processing before the Transformer. RNNs process sequences one token at a time, maintaining a hidden state. LSTMs improved on vanilla RNNs by adding gating mechanisms to handle long-range dependencies. The attention mechanism, introduced by Bahdanau et al. in 2014, allowed models to focus on relevant parts of the input. The Transformer architecture replaced recurrence entirely with self-attention, enabling parallel processing. BERT, developed by Google in 2018, used bidirectional Transformers for pre-training and achieved state-of-the-art results on many NLP benchmarks.",
+    "relevant": true
+  },
+  {
+    "id": "src_002",
+    "title": "Traditional Italian Pasta Recipes",
+    "text": "Italian pasta comes in hundreds of shapes, each designed to pair with specific sauces. Spaghetti, one of the most popular shapes, is traditionally served with tomato-based sauces like marinara or bolognese. Penne works well with thicker sauces that can get caught in its tube shape. Fresh pasta, made with eggs and flour, has a different texture than dried pasta. Classic dishes include carbonara (eggs, pecorino, guanciale), cacio e pepe (cheese and pepper), and aglio e olio (garlic and oil). The key to great pasta is cooking it al dente and using high-quality ingredients.",
+    "relevant": false
+  },
+  {
+    "id": "src_003",
+    "title": "Reinforcement Learning and Game Playing",
+    "text": "Reinforcement learning (RL) has achieved remarkable success in game-playing AI. DeepMind's AlphaGo defeated world champion Lee Sedol in Go in 2016, using a combination of deep neural networks and Monte Carlo tree search. AlphaZero, a more general version, mastered chess, Go, and shogi from scratch through self-play. OpenAI Five demonstrated superhuman performance in Dota 2. These achievements rely on techniques like policy gradient methods, Q-learning, and actor-critic architectures. The key challenge in RL is the exploration-exploitation tradeoff and the need for large amounts of simulated experience.",
+    "relevant": true
+  },
+  {
+    "id": "src_004",
+    "title": "Professional Basketball Strategy",
+    "text": "Modern NBA basketball has evolved significantly with the analytics revolution. The three-point shot has become central to offensive strategy, with teams like the Golden State Warriors popularizing small-ball lineups. Pick-and-roll remains the most common offensive action, while switching defense has become prevalent to counter it. Player tracking data from cameras installed in arenas provides detailed metrics on speed, distance covered, and shot quality. Advanced statistics like Player Efficiency Rating (PER), Win Shares, and Box Plus-Minus help evaluate player contributions beyond traditional stats.",
+    "relevant": false
+  },
+  {
+    "id": "src_005",
+    "title": "Ethics and Safety in AI Development",
+    "text": "AI safety has become a critical concern as systems grow more capable. Key risks include misalignment (AI systems pursuing goals different from human intentions), bias (models reflecting and amplifying societal prejudices), and misuse (deepfakes, autonomous weapons). Organizations like the Center for AI Safety, the Future of Life Institute, and Anthropic focus on ensuring AI development benefits humanity. Techniques for AI alignment include reinforcement learning from human feedback (RLHF), constitutional AI, and interpretability research. The EU AI Act and other regulations aim to create governance frameworks. Prominent researchers including Stuart Russell, Yoshua Bengio, and Geoffrey Hinton have called for careful development practices.",
+    "relevant": true
+  },
+  {
+    "id": "src_006",
+    "title": "Home Gardening for Beginners",
+    "text": "Starting a home garden requires understanding your climate zone and soil conditions. Most vegetables need at least 6 hours of direct sunlight daily. Tomatoes, peppers, and herbs like basil are excellent choices for beginners. Raised beds provide better drainage and soil control. Composting kitchen scraps creates nutrient-rich soil amendment. Watering deeply but less frequently encourages deeper root growth. Companion planting, like growing marigolds near tomatoes, can help deter pests naturally. Starting seeds indoors 6-8 weeks before the last frost date gives plants a head start.",
+    "relevant": false
+  },
+  {
+    "id": "src_007",
+    "title": "Computer Vision and Deep Learning",
+    "text": "Computer vision has been transformed by deep learning, starting with AlexNet's victory in the 2012 ImageNet competition. Convolutional Neural Networks (CNNs) like VGGNet, ResNet, and Inception pushed image classification accuracy beyond human performance. Object detection advanced through architectures like YOLO (You Only Look Once) and Faster R-CNN. More recently, Vision Transformers (ViT) have shown that the Transformer architecture works for images too, challenging CNN dominance. Applications include autonomous driving (Tesla, Waymo), medical imaging (detecting cancer from X-rays), facial recognition, and augmented reality. DALL-E and Stable Diffusion demonstrated that generative models can create photorealistic images from text descriptions.",
+    "relevant": true
+  },
+  {
+    "id": "src_008",
+    "title": "The Science of Brewing Coffee",
+    "text": "Coffee brewing is a complex extraction process where hot water dissolves soluble compounds from ground coffee beans. The ideal extraction temperature is between 195-205 degrees Fahrenheit. Grind size affects extraction rate: finer grinds extract faster but can lead to over-extraction and bitterness. The brew ratio (coffee to water) typically ranges from 1:15 to 1:17 by weight. Different brewing methods like pour-over, French press, espresso, and cold brew each produce distinct flavor profiles. Specialty coffee roasters source beans from specific farms and regions, emphasizing terroir and processing methods.",
+    "relevant": false
+  },
+  {
+    "id": "src_009",
+    "title": "Knowledge Representation and Reasoning",
+    "text": "Knowledge representation (KR) is a foundational area of AI concerned with encoding information for automated reasoning. Early approaches included semantic networks (graphs of concepts connected by labeled edges) and frames (structured representations with slots and fillers). Description logics provide formal semantics for ontologies, forming the basis of the Web Ontology Language (OWL). The Semantic Web initiative, led by Tim Berners-Lee, promoted RDF and SPARQL for linked data on the web. Modern knowledge graphs like Google's Knowledge Graph, Wikidata, and DBpedia combine structured data with machine learning. Neuro-symbolic AI aims to integrate neural networks with symbolic reasoning for more robust and explainable AI systems.",
+    "relevant": true
+  },
+  {
+    "id": "src_010",
+    "title": "Advances in Natural Language Understanding",
+    "text": "Natural Language Understanding (NLU) has progressed rapidly with the advent of pre-trained language models. BERT introduced masked language modeling for learning bidirectional representations. GPT models demonstrated that autoregressive pre-training scales effectively. Instruction tuning and RLHF improved model alignment with human preferences. Chain-of-thought prompting enables models to solve complex reasoning tasks step by step. Benchmark datasets like GLUE, SuperGLUE, and MMLU track progress. Challenges remain in areas like common-sense reasoning, factual consistency, and multilingual understanding. Recent work on retrieval-augmented generation (RAG) grounds model responses in external knowledge to reduce hallucination.",
+    "relevant": true
+  }
+]

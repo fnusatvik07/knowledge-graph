@@ -1,0 +1,144 @@
+{
+  "description": "Gold standard dataset for evaluating entity and relationship extraction quality. Each document includes manually labeled ground truth entities and relationships.",
+  "documents": [
+    {
+      "doc_id": "doc_01",
+      "title": "NovaTech Acquires CloudPeak Solutions",
+      "text": "NovaTech Inc., a San Francisco-based enterprise software company led by CEO Amanda Torres, announced its acquisition of CloudPeak Solutions for $1.8 billion. CloudPeak, founded in 2019 by Dr. Raj Patel in Seattle, specializes in cloud-native database technologies. The acquisition will be overseen by NovaTech CTO Marcus Wei, who plans to integrate CloudPeak's distributed computing platform into NovaTech's existing product suite. The deal was brokered by investment firm Pinnacle Advisors and is expected to close by December 2026.",
+      "expected_entities": [
+        {"name": "NovaTech Inc.", "type": "ORGANIZATION"},
+        {"name": "CloudPeak Solutions", "type": "ORGANIZATION"},
+        {"name": "Amanda Torres", "type": "PERSON"},
+        {"name": "Dr. Raj Patel", "type": "PERSON"},
+        {"name": "Marcus Wei", "type": "PERSON"},
+        {"name": "Pinnacle Advisors", "type": "ORGANIZATION"},
+        {"name": "San Francisco", "type": "LOCATION"},
+        {"name": "Seattle", "type": "LOCATION"}
+      ],
+      "expected_relationships": [
+        {"source": "Amanda Torres", "target": "NovaTech Inc.", "type": "CEO_OF"},
+        {"source": "Dr. Raj Patel", "target": "CloudPeak Solutions", "type": "FOUNDED"},
+        {"source": "Marcus Wei", "target": "NovaTech Inc.", "type": "CTO_OF"},
+        {"source": "NovaTech Inc.", "target": "CloudPeak Solutions", "type": "ACQUIRED"},
+        {"source": "Pinnacle Advisors", "target": "NovaTech Inc.", "type": "ADVISED"},
+        {"source": "NovaTech Inc.", "target": "San Francisco", "type": "LOCATED_IN"},
+        {"source": "CloudPeak Solutions", "target": "Seattle", "type": "LOCATED_IN"}
+      ]
+    },
+    {
+      "doc_id": "doc_02",
+      "title": "Quantum Computing Breakthrough at MIT",
+      "text": "Researchers at the Massachusetts Institute of Technology, led by Professor Elena Vasquez of the Department of Physics, announced a breakthrough in quantum error correction. The research, published in Nature Physics, demonstrated a novel approach using topological qubits that reduces error rates by 90%. The project was funded by a $15 million grant from the National Science Foundation and a partnership with IBM Quantum. Graduate student Wei Chen and postdoctoral researcher Dr. Sarah Okonkwo were key contributors to the research team.",
+      "expected_entities": [
+        {"name": "Massachusetts Institute of Technology", "type": "ORGANIZATION"},
+        {"name": "Elena Vasquez", "type": "PERSON"},
+        {"name": "Nature Physics", "type": "ORGANIZATION"},
+        {"name": "National Science Foundation", "type": "ORGANIZATION"},
+        {"name": "IBM Quantum", "type": "ORGANIZATION"},
+        {"name": "Wei Chen", "type": "PERSON"},
+        {"name": "Dr. Sarah Okonkwo", "type": "PERSON"},
+        {"name": "Department of Physics", "type": "ORGANIZATION"}
+      ],
+      "expected_relationships": [
+        {"source": "Elena Vasquez", "target": "Massachusetts Institute of Technology", "type": "WORKS_AT"},
+        {"source": "Wei Chen", "target": "Massachusetts Institute of Technology", "type": "STUDIES_AT"},
+        {"source": "Dr. Sarah Okonkwo", "target": "Massachusetts Institute of Technology", "type": "WORKS_AT"},
+        {"source": "National Science Foundation", "target": "Massachusetts Institute of Technology", "type": "FUNDED"},
+        {"source": "IBM Quantum", "target": "Massachusetts Institute of Technology", "type": "PARTNERS_WITH"},
+        {"source": "Elena Vasquez", "target": "Department of Physics", "type": "MEMBER_OF"}
+      ]
+    },
+    {
+      "doc_id": "doc_03",
+      "title": "Global Climate Summit Agreements",
+      "text": "The 2026 Global Climate Summit held in Geneva, Switzerland brought together leaders from 45 countries. UN Secretary-General Maria Santos moderated the key sessions. The European Union, represented by Climate Commissioner Hans Mueller, pledged to reduce emissions by 55% by 2030. China's Special Envoy for Climate Li Wei announced a $50 billion green energy investment fund. The summit resulted in the Geneva Climate Accord, co-authored by Dr. James Thornton of the World Resources Institute and Professor Amara Diallo from the University of Nairobi.",
+      "expected_entities": [
+        {"name": "2026 Global Climate Summit", "type": "EVENT"},
+        {"name": "Geneva", "type": "LOCATION"},
+        {"name": "Switzerland", "type": "LOCATION"},
+        {"name": "Maria Santos", "type": "PERSON"},
+        {"name": "United Nations", "type": "ORGANIZATION"},
+        {"name": "European Union", "type": "ORGANIZATION"},
+        {"name": "Hans Mueller", "type": "PERSON"},
+        {"name": "Li Wei", "type": "PERSON"},
+        {"name": "China", "type": "LOCATION"},
+        {"name": "Geneva Climate Accord", "type": "EVENT"},
+        {"name": "Dr. James Thornton", "type": "PERSON"},
+        {"name": "World Resources Institute", "type": "ORGANIZATION"},
+        {"name": "Amara Diallo", "type": "PERSON"},
+        {"name": "University of Nairobi", "type": "ORGANIZATION"}
+      ],
+      "expected_relationships": [
+        {"source": "2026 Global Climate Summit", "target": "Geneva", "type": "HELD_IN"},
+        {"source": "Maria Santos", "target": "United Nations", "type": "REPRESENTS"},
+        {"source": "Hans Mueller", "target": "European Union", "type": "REPRESENTS"},
+        {"source": "Li Wei", "target": "China", "type": "REPRESENTS"},
+        {"source": "Dr. James Thornton", "target": "World Resources Institute", "type": "WORKS_AT"},
+        {"source": "Amara Diallo", "target": "University of Nairobi", "type": "WORKS_AT"},
+        {"source": "Dr. James Thornton", "target": "Geneva Climate Accord", "type": "AUTHORED"},
+        {"source": "Amara Diallo", "target": "Geneva Climate Accord", "type": "AUTHORED"}
+      ]
+    },
+    {
+      "doc_id": "doc_04",
+      "title": "BioGenesis Pharma Drug Trial Results",
+      "text": "BioGenesis Pharmaceuticals, headquartered in Boston, Massachusetts, reported positive Phase III trial results for their Alzheimer's drug candidate BG-2847. The trial, conducted across 12 hospitals including Johns Hopkins Hospital and Mayo Clinic, enrolled 2,400 patients. Lead researcher Dr. Patricia Nguyen presented the findings at the American Neurological Association annual conference. BioGenesis CEO Michael Strauss stated that FDA submission is planned for Q1 2027. The research was partially funded by the Alzheimer's Research Foundation, led by Director Thomas Grant.",
+      "expected_entities": [
+        {"name": "BioGenesis Pharmaceuticals", "type": "ORGANIZATION"},
+        {"name": "Boston", "type": "LOCATION"},
+        {"name": "Massachusetts", "type": "LOCATION"},
+        {"name": "BG-2847", "type": "PRODUCT"},
+        {"name": "Johns Hopkins Hospital", "type": "ORGANIZATION"},
+        {"name": "Mayo Clinic", "type": "ORGANIZATION"},
+        {"name": "Dr. Patricia Nguyen", "type": "PERSON"},
+        {"name": "American Neurological Association", "type": "ORGANIZATION"},
+        {"name": "Michael Strauss", "type": "PERSON"},
+        {"name": "FDA", "type": "ORGANIZATION"},
+        {"name": "Alzheimer's Research Foundation", "type": "ORGANIZATION"},
+        {"name": "Thomas Grant", "type": "PERSON"}
+      ],
+      "expected_relationships": [
+        {"source": "BioGenesis Pharmaceuticals", "target": "Boston", "type": "LOCATED_IN"},
+        {"source": "BioGenesis Pharmaceuticals", "target": "BG-2847", "type": "DEVELOPED"},
+        {"source": "Dr. Patricia Nguyen", "target": "BioGenesis Pharmaceuticals", "type": "WORKS_AT"},
+        {"source": "Michael Strauss", "target": "BioGenesis Pharmaceuticals", "type": "CEO_OF"},
+        {"source": "Thomas Grant", "target": "Alzheimer's Research Foundation", "type": "LEADS"},
+        {"source": "Alzheimer's Research Foundation", "target": "BioGenesis Pharmaceuticals", "type": "FUNDED"},
+        {"source": "Johns Hopkins Hospital", "target": "BG-2847", "type": "TRIAL_SITE_FOR"},
+        {"source": "Mayo Clinic", "target": "BG-2847", "type": "TRIAL_SITE_FOR"}
+      ]
+    },
+    {
+      "doc_id": "doc_05",
+      "title": "SpaceVentures Launch and Partnership",
+      "text": "SpaceVentures Corp., founded by billionaire entrepreneur Diana Kowalski, successfully launched its Falcon Nova rocket from Cape Canaveral, Florida. The mission deployed three communication satellites for TeleGlobal Networks, a London-based telecommunications company led by CEO Raj Sharma. SpaceVentures announced a new partnership with the European Space Agency for a Mars exploration program. Chief Engineer Alex Yamamoto designed the Falcon Nova's revolutionary ion propulsion system. NASA Administrator Dr. Karen Mitchell praised the launch and confirmed that SpaceVentures has been selected as a contractor for the Artemis IV mission.",
+      "expected_entities": [
+        {"name": "SpaceVentures Corp.", "type": "ORGANIZATION"},
+        {"name": "Diana Kowalski", "type": "PERSON"},
+        {"name": "Falcon Nova", "type": "PRODUCT"},
+        {"name": "Cape Canaveral", "type": "LOCATION"},
+        {"name": "Florida", "type": "LOCATION"},
+        {"name": "TeleGlobal Networks", "type": "ORGANIZATION"},
+        {"name": "London", "type": "LOCATION"},
+        {"name": "Raj Sharma", "type": "PERSON"},
+        {"name": "European Space Agency", "type": "ORGANIZATION"},
+        {"name": "Alex Yamamoto", "type": "PERSON"},
+        {"name": "NASA", "type": "ORGANIZATION"},
+        {"name": "Dr. Karen Mitchell", "type": "PERSON"},
+        {"name": "Artemis IV", "type": "EVENT"}
+      ],
+      "expected_relationships": [
+        {"source": "Diana Kowalski", "target": "SpaceVentures Corp.", "type": "FOUNDED"},
+        {"source": "SpaceVentures Corp.", "target": "Falcon Nova", "type": "DEVELOPED"},
+        {"source": "SpaceVentures Corp.", "target": "Cape Canaveral", "type": "LAUNCHED_FROM"},
+        {"source": "SpaceVentures Corp.", "target": "TeleGlobal Networks", "type": "CLIENT_OF"},
+        {"source": "Raj Sharma", "target": "TeleGlobal Networks", "type": "CEO_OF"},
+        {"source": "TeleGlobal Networks", "target": "London", "type": "LOCATED_IN"},
+        {"source": "SpaceVentures Corp.", "target": "European Space Agency", "type": "PARTNERS_WITH"},
+        {"source": "Alex Yamamoto", "target": "SpaceVentures Corp.", "type": "WORKS_AT"},
+        {"source": "Dr. Karen Mitchell", "target": "NASA", "type": "LEADS"},
+        {"source": "SpaceVentures Corp.", "target": "Artemis IV", "type": "CONTRACTED_FOR"}
+      ]
+    }
+  ]
+}

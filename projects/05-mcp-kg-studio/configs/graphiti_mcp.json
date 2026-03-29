@@ -1,0 +1,41 @@
+{
+  "_comment": [
+    "MCP configuration for the Graphiti MCP server (by Zep).",
+    "GitHub: https://github.com/getzep/graphiti",
+    "",
+    "Graphiti builds temporal knowledge graphs — facts have timestamps",
+    "and can be invalidated over time. It uses Neo4j as its backend.",
+    "",
+    "Graphiti MCP exposes tools for:",
+    "  - add_episode: Add a fact/observation with a timestamp",
+    "  - search: Semantic search over the knowledge graph",
+    "  - get_entity: Retrieve entity details",
+    "  - get_episodes: Get facts for a time range",
+    "  - invalidate_edge: Mark a fact as no longer true",
+    "",
+    "Requires: Neo4j running + OpenAI API key (for embeddings)",
+    "",
+    "Add to Claude Code via CLI:",
+    "  claude mcp add graphiti -- python -m graphiti_mcp",
+    "",
+    "Or install and run manually:",
+    "  pip install graphiti-mcp",
+    "  python -m graphiti_mcp"
+  ],
+  "mcpServers": {
+    "graphiti": {
+      "command": "python",
+      "args": [
+        "-m",
+        "graphiti_mcp"
+      ],
+      "env": {
+        "NEO4J_URI": "bolt://localhost:7687",
+        "NEO4J_USERNAME": "neo4j",
+        "NEO4J_PASSWORD": "password123",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "GRAPHITI_GROUP_ID": "kg_studio"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+company,founded_year,headquarters,ceo,flagship_product,category,funding_total_b,investors,num_employees,key_technology
+OpenAI,2015,San Francisco,Sam Altman,GPT-4,LLM Provider,11.3,"Microsoft;Thrive Capital;Khosla Ventures",3500,Transformers
+Anthropic,2021,San Francisco,Dario Amodei,Claude,LLM Provider,7.6,"Google;Spark Capital;Salesforce Ventures",1200,Constitutional AI
+Google DeepMind,2010,London,Demis Hassabis,Gemini,LLM Provider,0,Google,2500,Transformers
+Meta AI,2013,Menlo Park,Yann LeCun,Llama,Open Source LLM,0,Meta,1500,Transformers
+Mistral AI,2023,Paris,Arthur Mensch,Mixtral,Open Source LLM,2.2,"Andreessen Horowitz;Lightspeed;Microsoft",600,Mixture of Experts
+Cohere,2019,Toronto,Aidan Gomez,Command R,Enterprise LLM,0.9,"Inovia Capital;NVIDIA;Salesforce Ventures",400,RAG
+LangChain,2022,San Francisco,Harrison Chase,LangGraph,Agent Framework,0.035,"Sequoia Capital;Benchmark",150,Agent Orchestration
+Pinecone,2019,New York,Edo Liberty,Pinecone DB,Vector Database,0.238,"Andreessen Horowitz;Wing Venture Capital",300,Vector Search
+Weaviate,2019,Amsterdam,Bob van Luijt,Weaviate DB,Vector Database,0.068,"Index Ventures;Battery Ventures",200,Vector Search
+ChromaDB,2022,San Francisco,Jeff Huber,Chroma,Vector Database,0.02,"Bloomberg Beta;Crane Venture Partners",40,Vector Search
+Neo4j,2007,San Mateo,Emil Eifrem,Neo4j DB,Graph Database,0.582,"Eurazeo;GV;One Peak Partners",800,Graph Storage
+Hugging Face,2016,New York,Clement Delangue,Transformers Hub,ML Platform,0.395,"Google;Amazon;Salesforce;NVIDIA",250,Model Hub
+Stability AI,2019,London,Prem Akkaraju,Stable Diffusion,Image Generation,0.25,"Lightspeed;Coatue;Intel Capital",200,Diffusion Models
+Perplexity AI,2022,San Francisco,Aravind Srinivas,Perplexity Search,AI Search,0.5,"Jeff Bezos;NVIDIA;IVP",200,RAG
+Cursor,2022,San Francisco,Michael Truell,Cursor IDE,AI Coding,0.06,"Andreessen Horowitz;Thrive Capital",100,Code Generation
+Replit,2016,San Francisco,Amjad Masad,Replit Agent,AI Coding,0.222,"Andreessen Horowitz;Khosla Ventures",200,Code Generation
+Adept AI,2022,San Francisco,Persaud Raman,ACT-1,AI Agent,0.415,"General Catalyst;Spark Capital",100,Action Transformers
+Jasper AI,2021,Austin,Timothy Young,Jasper,Content AI,0.305,"Insight Partners;Coatue;IVP",500,Content Generation
+Scale AI,2016,San Francisco,Alexandr Wang,Scale Data Engine,Data Platform,1.4,"Amazon;Meta;Accel;Tiger Global",700,Data Labeling
+Databricks,2013,San Francisco,Ali Ghodsi,Mosaic ML,Data + AI Platform,4.1,"Andreessen Horowitz;Amazon;Google",7000,Data Infrastructure

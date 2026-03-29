@@ -1,0 +1,27 @@
+[
+  {
+    "id": "doc_001",
+    "title": "Large Language Models and Transformers",
+    "text": "Large Language Models (LLMs) such as GPT-4, Claude, and LLaMA are built on the Transformer architecture introduced by Vaswani et al. in 2017. Transformers use self-attention mechanisms to process sequences in parallel rather than sequentially like RNNs. The key innovation is the attention mechanism that computes relationships between all positions in a sequence simultaneously. Modern LLMs are trained on massive text corpora using next-token prediction as the primary objective. Companies like OpenAI, Anthropic, Google DeepMind, and Meta have released increasingly capable models. Fine-tuning techniques including LoRA and RLHF have become standard for adapting base models to specific tasks. The scaling laws discovered by Kaplan et al. showed that model performance improves predictably with more parameters, data, and compute. This has driven an arms race in model size, with models reaching hundreds of billions of parameters."
+  },
+  {
+    "id": "doc_002",
+    "title": "Knowledge Graphs in Industry",
+    "text": "Knowledge graphs represent structured information as entities connected by typed relationships. Google introduced their Knowledge Graph in 2012 to enhance search results with structured data panels. Since then, knowledge graphs have been adopted across industries. In healthcare, knowledge graphs connect diseases, symptoms, drugs, and genes to support clinical decision-making. Financial institutions use knowledge graphs for fraud detection by mapping transaction networks and identifying suspicious patterns. Neo4j, the most popular graph database, uses the Cypher query language for graph traversal. Amazon Neptune and Microsoft Azure Cosmos DB offer managed graph database services. The combination of knowledge graphs with large language models has created the field of GraphRAG, where retrieval-augmented generation uses graph structure to provide better context for LLM responses."
+  },
+  {
+    "id": "doc_003",
+    "title": "Multi-Agent Systems in AI",
+    "text": "Multi-agent systems (MAS) involve multiple autonomous agents interacting within a shared environment. Early MAS research focused on game theory and distributed problem-solving. Modern AI agent frameworks like LangGraph, AutoGen, and CrewAI enable building systems where multiple LLM-powered agents collaborate on complex tasks. In a typical multi-agent architecture, a supervisor agent delegates subtasks to specialized worker agents. Each worker agent has its own tools, memory, and expertise. Communication between agents can be direct (peer-to-peer) or mediated through a shared state like a knowledge graph. Key challenges include coordination (avoiding redundant work), consistency (maintaining a coherent shared state), and scalability (adding agents without degrading performance). Research from Stanford and MIT has shown that multi-agent debate and reflection can improve reasoning quality beyond what single agents achieve."
+  },
+  {
+    "id": "doc_004",
+    "title": "Vector Databases and Embeddings",
+    "text": "Vector databases store high-dimensional embedding vectors and support efficient similarity search. Popular vector databases include Pinecone, Weaviate, Qdrant, Chroma, and Milvus. Embeddings are dense numerical representations of text, images, or other data produced by neural network models. OpenAI's text-embedding-3-small and Cohere's embed-v3 are widely used embedding models. The key operation in vector databases is approximate nearest neighbor (ANN) search using algorithms like HNSW (Hierarchical Navigable Small World) or IVF (Inverted File Index). Neo4j added native vector index support in version 5.11, allowing hybrid queries that combine graph traversal with vector similarity search. This hybrid approach is powerful for RAG applications because it retrieves both semantically similar content and structurally related entities. FAISS, developed by Meta, remains the most popular library for local vector similarity operations."
+  },
+  {
+    "id": "doc_005",
+    "title": "Retrieval-Augmented Generation",
+    "text": "Retrieval-Augmented Generation (RAG) combines information retrieval with text generation to ground LLM responses in factual data. The original RAG paper by Lewis et al. at Facebook AI introduced the concept of retrieving documents at inference time to condition generation. Modern RAG pipelines typically chunk documents, embed them into a vector store, retrieve relevant chunks at query time, and pass them as context to an LLM. Advanced RAG techniques include re-ranking retrieved results, query decomposition for multi-step questions, and hybrid retrieval combining sparse (BM25) and dense (embedding) search. GraphRAG, pioneered by Microsoft Research, extends RAG by using knowledge graph structure for retrieval. Instead of retrieving isolated text chunks, GraphRAG traverses entity neighborhoods and relationship paths to build richer context. This approach significantly improves answers to questions requiring multi-hop reasoning or understanding of relationships between entities."
+  }
+]

@@ -1,0 +1,6 @@
+streamlit>=1.30.0
+networkx>=3.0
+pyvis>=0.3.2
+matplotlib>=3.8
+plotly>=5.18
+numpy>=1.24

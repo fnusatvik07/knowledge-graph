@@ -1,0 +1,15 @@
+services:
+  neo4j:
+    image: neo4j:5.15.0
+    container_name: workshop-neo4j
+    ports:
+      - "7474:7474"   # Browser UI
+      - "7687:7687"   # Bolt protocol
+    environment:
+      NEO4J_AUTH: neo4j/workshop2024
+      NEO4J_PLUGINS: '["apoc"]'
+    volumes:
+      - neo4j_data:/data
+
+volumes:
+  neo4j_data:

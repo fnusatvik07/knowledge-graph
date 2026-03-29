@@ -1,0 +1,52 @@
+[
+  {
+    "pmid": "39000001",
+    "title": "BRCA1 mutations and triple-negative breast cancer: therapeutic implications of PARP inhibition",
+    "abstract": "Triple-negative breast cancer (TNBC) remains a challenging subtype with limited targeted therapies. Patients harboring BRCA1 germline mutations show increased sensitivity to poly(ADP-ribose) polymerase (PARP) inhibitors such as olaparib. In this study, we demonstrate that olaparib significantly reduces tumor growth in BRCA1-mutant TNBC cell lines by exploiting synthetic lethality. The drug targets PARP1 protein, preventing DNA repair in homologous recombination-deficient cells. Our findings support the use of olaparib as a first-line treatment for BRCA1-mutant triple-negative breast cancer."
+  },
+  {
+    "pmid": "39000002",
+    "title": "TP53 gain-of-function mutations activate the MAPK signaling pathway in colorectal cancer",
+    "abstract": "Gain-of-function mutations in the TP53 gene are prevalent in colorectal cancer and contribute to tumor progression beyond simple loss of tumor suppression. We show that mutant p53 protein interacts with EGFR and activates the MAPK signaling pathway, promoting cell proliferation and resistance to apoptosis. Colorectal cancer patients with TP53 gain-of-function mutations exhibited significantly worse overall survival. These findings suggest that targeting the MAPK pathway with MEK inhibitors such as trametinib may benefit this patient subgroup."
+  },
+  {
+    "pmid": "39000003",
+    "title": "Metformin repurposing: anti-cancer effects through AMPK activation in hepatocellular carcinoma",
+    "abstract": "Metformin, a widely prescribed drug for type 2 diabetes, has shown promising anti-cancer properties. In hepatocellular carcinoma (HCC) cell lines, metformin activates AMP-activated protein kinase (AMPK), which in turn inhibits the mTOR signaling pathway. This leads to reduced cell proliferation and increased apoptosis in hepatocytes. A retrospective cohort study of diabetic patients revealed that metformin use was associated with a 40% reduction in HCC incidence. These results support the investigation of metformin as a repurposed drug for hepatocellular carcinoma prevention."
+  },
+  {
+    "pmid": "39000004",
+    "title": "KRAS G12C inhibitors: sotorasib targets mutant KRAS in non-small cell lung cancer",
+    "abstract": "The KRAS G12C mutation is found in approximately 13% of non-small cell lung cancer (NSCLC) cases. Sotorasib (AMG 510) is a first-in-class inhibitor that covalently binds to KRAS G12C protein, locking it in an inactive GDP-bound state. In the CodeBreaK 100 trial, sotorasib demonstrated a 37.1% objective response rate in previously treated KRAS G12C-mutant NSCLC patients. The drug inhibits downstream RAF-MEK-ERK signaling, reducing tumor cell proliferation. Sotorasib represents a breakthrough in targeting previously undruggable KRAS mutations."
+  },
+  {
+    "pmid": "39000005",
+    "title": "CD19-directed CAR-T cell therapy in relapsed B-cell acute lymphoblastic leukemia",
+    "abstract": "Chimeric antigen receptor T-cell (CAR-T) therapy targeting CD19 has revolutionized treatment of relapsed or refractory B-cell acute lymphoblastic leukemia (B-ALL). Tisagenlecleucel, an anti-CD19 CAR-T product, achieves complete remission rates exceeding 80% in pediatric B-ALL. The engineered T-cells recognize CD19 protein expressed on the surface of malignant B-cells, triggering targeted cytotoxicity. However, cytokine release syndrome remains a significant adverse effect. IL-6 receptor blockade with tocilizumab effectively manages this complication."
+  },
+  {
+    "pmid": "39000006",
+    "title": "GBA mutations and glucocerebrosidase deficiency in Parkinson's disease pathogenesis",
+    "abstract": "Mutations in the GBA gene, encoding the lysosomal enzyme glucocerebrosidase (GCase), represent the most common genetic risk factor for Parkinson's disease. GBA mutations lead to reduced GCase protein activity, causing accumulation of glucosylceramide in dopaminergic neurons of the substantia nigra. This lysosomal dysfunction promotes alpha-synuclein aggregation, a hallmark of Parkinson's disease. Ambroxol, a pharmacological chaperone, has been shown to increase GCase activity and reduce alpha-synuclein levels in patient-derived neurons. Clinical trials are evaluating ambroxol as a disease-modifying therapy for GBA-associated Parkinson's disease."
+  },
+  {
+    "pmid": "39000007",
+    "title": "VEGF-A expression in renal cell carcinoma: bevacizumab and the angiogenesis pathway",
+    "abstract": "Vascular endothelial growth factor A (VEGF-A) is highly expressed in clear cell renal cell carcinoma (ccRCC), driving tumor angiogenesis through the VEGF signaling pathway. Bevacizumab, a monoclonal antibody that targets VEGF-A protein, has demonstrated clinical efficacy in combination with interferon-alpha for advanced ccRCC. The drug inhibits VEGF-A binding to its receptor VEGFR2, expressed on endothelial cells, thereby suppressing new blood vessel formation. Sorafenib, a multi-kinase inhibitor, also targets the VEGF pathway and shows activity in ccRCC patients who progress on bevacizumab."
+  },
+  {
+    "pmid": "39000008",
+    "title": "JAK2 V617F mutation drives myeloproliferative neoplasms through constitutive STAT signaling",
+    "abstract": "The JAK2 V617F somatic mutation is found in over 95% of polycythemia vera cases and approximately 50% of essential thrombocythemia and primary myelofibrosis cases. This gain-of-function mutation causes constitutive activation of the JAK-STAT signaling pathway, leading to uncontrolled proliferation of myeloid cells in the bone marrow. Ruxolitinib, a selective JAK1/JAK2 inhibitor, effectively reduces splenomegaly and symptom burden in myelofibrosis patients. The drug targets JAK2 protein and blocks downstream STAT3 and STAT5 phosphorylation, normalizing cytokine signaling in hematopoietic stem cells."
+  },
+  {
+    "pmid": "39000009",
+    "title": "PCSK9 inhibition with evolocumab reduces LDL cholesterol in familial hypercholesterolemia",
+    "abstract": "Familial hypercholesterolemia (FH) is a genetic disorder characterized by markedly elevated low-density lipoprotein (LDL) cholesterol levels and premature cardiovascular disease. Mutations in the LDLR gene impair LDL receptor function, but PCSK9 gain-of-function mutations also contribute by promoting LDL receptor degradation in hepatocytes. Evolocumab, a monoclonal antibody that inhibits PCSK9 protein, reduces LDL cholesterol by up to 60% in FH patients. The drug prevents PCSK9 from binding to the LDL receptor on hepatocytes, increasing receptor recycling and LDL clearance from the bloodstream."
+  },
+  {
+    "pmid": "39000010",
+    "title": "HER2 amplification and trastuzumab resistance: PI3K pathway activation in gastric cancer",
+    "abstract": "HER2 gene amplification occurs in approximately 15-20% of gastric cancers and is associated with aggressive disease. Trastuzumab, a monoclonal antibody targeting HER2 protein, improves survival in HER2-positive advanced gastric cancer when combined with chemotherapy. However, resistance frequently develops through activation of the PI3K-AKT-mTOR signaling pathway, often driven by PIK3CA mutations. In trastuzumab-resistant gastric cancer cell lines, the combination of trastuzumab with the PI3K inhibitor alpelisib restored sensitivity and induced apoptosis. These findings highlight the role of PIK3CA mutations in mediating trastuzumab resistance."
+  }
+]

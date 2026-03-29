@@ -1,0 +1,60 @@
+# Multi-DB KG Explorer — Docker Compose
+# Launches Neo4j, ArangoDB, Memgraph, and FalkorDB for side-by-side comparison.
+
+services:
+  # ── Neo4j ──────────────────────────────────────────────────────────────
+  # Docs: https://neo4j.com/docs/operations-manual/current/docker/
+  neo4j:
+    image: neo4j:5-community
+    container_name: kg-neo4j
+    ports:
+      - "7474:7474"   # HTTP / Browser UI
+      - "7687:7687"   # Bolt protocol
+    environment:
+      - NEO4J_AUTH=neo4j/password123
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - neo4j_data:/data
+    restart: unless-stopped
+
+  # ── ArangoDB ───────────────────────────────────────────────────────────
+  # Docs: https://docs.arangodb.com/stable/deploy/single-instance/manual-start/
+  arangodb:
+    image: arangodb:3.12
+    container_name: kg-arangodb
+    ports:
+      - "8529:8529"   # HTTP / Web UI
+    environment:
+      - ARANGO_ROOT_PASSWORD=password123
+    volumes:
+      - arangodb_data:/var/lib/arangodb3
+    restart: unless-stopped
+
+  # ── Memgraph ───────────────────────────────────────────────────────────
+  # Docs: https://memgraph.com/docs/getting-started/install-memgraph/docker
+  memgraph:
+    image: memgraph/memgraph-platform:latest
+    container_name: kg-memgraph
+    ports:
+      - "7688:7687"   # Bolt protocol (remapped to avoid Neo4j conflict)
+      - "3000:3000"   # Memgraph Lab UI
+    volumes:
+      - memgraph_data:/var/lib/memgraph
+    restart: unless-stopped
+
+  # ── FalkorDB ───────────────────────────────────────────────────────────
+  # Docs: https://docs.falkordb.com/
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: kg-falkordb
+    ports:
+      - "6379:6379"   # Redis protocol
+    volumes:
+      - falkordb_data:/data
+    restart: unless-stopped
+
+volumes:
+  neo4j_data:
+  arangodb_data:
+  memgraph_data:
+  falkordb_data:

@@ -1,0 +1,132 @@
+Title: Graphs RAG at Scale: Beyond Retrieval-Augmented Generation with Labeled Property Graphs and Resource Description Framework for Complex and Unknown Search Spaces
+
+Authors: Manie Tadayon and Mayank Gupta (Capital Group)
+Published: March 21, 2026 | arXiv: 2603.22340v1
+
+Abstract: This paper introduces a novel end-to-end Graph RAG framework that combines Labeled Property Graph (LPG) and Resource Description Framework (RDF) architectures to address the limitations of traditional embedding-based Retrieval-Augmented Generation (RAG). Key innovations include dynamic document retrieval without pre-specifying document count, a JSON-to-RDF conversion methodology, and a text-to-Cypher framework achieving over 90% accuracy in real-time query translation. The approach is evaluated against an agentic RAG baseline (RAG2) on a dataset of 1,104 investment product records and 200 test questions spanning four query intent categories. The LPG-based approach achieves 185.5 out of 200 points, the RDF-based approach achieves 172.5 points, and the agentic RAG baseline achieves only 116 points.
+
+1. Introduction
+
+The paper addresses fundamental limitations in Large Language Models (LLMs) and traditional Retrieval-Augmented Generation (RAG) systems. LLMs suffer from static training data and hallucination issues. While continual pretraining and fine-tuning could help, these approaches are prohibitively time-consuming and computationally expensive. RAG emerged to combine LLM generation with dynamic knowledge retrieval, grounding responses in current information.
+
+However, traditional RAG relies on dense vector embeddings and similarity search, creating several critical problems: the search space must be predefined, document counts require preset parameters, and the approach struggles with semi-structured or structured data. The authors note embedding-based retrieval has theoretical limitations and the heavy dependence on reranking models introduces inefficiencies and potential bottlenecks.
+
+Graph representations offer advantages for complex, interconnected data by naturally capturing relationships and hierarchies. Graph-based RAG enables more flexible, context-aware retrieval and reasoning than traditional approaches.
+
+The authors contribute three main innovations: (1) an end-to-end Graph RAG framework using both Labeled Property Graphs (LPG) and Resource Description Framework (RDF) for semi-structured JSON data; (2) a text-to-Cypher module achieving over 90% accuracy in real-time query translation; (3) empirical evidence that graph-based RAG significantly outperforms traditional embedding-based RAG in accuracy, response quality, and reasoning.
+
+2. Background and Related Work
+
+2.1 Retrieval-Augmented Generation (RAG)
+
+RAG combines the generative prowess of LLMs with dynamic access to external knowledge sources. It consists of a retriever component and a generator component. The approach faces key challenges: embedding models are trained on general text and may not be optimized for specialized domains, and retrieval is noisy and highly sensitive to the number of retrieved documents (top-k).
+
+2.2 Graph RAG
+
+Unlike standard RAG, graph-based methods construct graphs from corpus data, typically involving: (1) knowledge graph building via LLM-based entity and relationship extraction; (2) relevant node/subgraph retrieval; (3) answer generation incorporating graph information. Graph RAG retrieves and reasons over structured graph elements such as nodes and relationships instead of raw text chunks.
+
+2.3 Resource Description Frameworks (RDF)
+
+RDF models data as subject-predicate-object triplets, forming a directed, labeled graph where nodes represent entities or values, and edges capture the relationships between them. This structure supports flexible, schema-agnostic modeling of complex, interconnected data.
+
+2.4 Labeled Property Graphs (LPGs)
+
+LPG represents information as nodes, relationships (edges), and properties, where both nodes and edges can have labels and key-value properties, enabling rich, schema-agnostic representation.
+
+3. Dataset
+
+The research utilizes 1,104 investment product records from Capital Group, including mutual funds, ETFs, and Public Private Solutions (PPS). The data is structured as nested JSON key-value pairs with hierarchical attributes up to 3-4 levels deep. The dataset includes complex nested structures such as a successMetrics object with nested byYears arrays containing 7 yearly entries (1YR through 20YR), each with success rates, composite returns, index returns, and performance metrics.
+
+4. Methodology
+
+4.1 RDF Pipeline
+
+The RDF pipeline processes structured knowledge stored as triplets. JSON fund data is converted to RDF triplets stored in Amazon Neptune, with embeddings generated for unique nodes and relationships in a vector database. The conversion process creates 650,000+ unique triplets from 1,104 fund records, spanning 14,000+ nodes and 9,000 relationships. This deterministic conversion completes in approximately four minutes for the entire dataset, eliminating noise from LLM-based extraction.
+
+4.1.1 Node Selection Process
+
+Unique nodes are extracted from Neptune. An LLM-based agent extracts fund names, types, and asset classes from user queries, with deterministic mapping linking attributes to actual nodes using available metadata.
+
+4.1.2 Relationship Identification
+
+The dataset contains over 8,000 distinct relationships. The pipeline applies a multi-stage approach: supervised classification narrows the candidate relationship set; embedding-based selection identifies up to 50 relevant relationships; parallel LLM-based relationship detection selects up to 100 relationships; the union of both methods forms the final relationship set.
+
+4.1.3 Graph Traversal
+
+Selected nodes and relationships traverse the Neptune graph using SPARQL, returning relevant triplets. An alternative implementation using NetworkX operates entirely in-memory, identifying reachable relationships and intersecting with selected relationships to retrieve corresponding triplets.
+
+4.2 LPG Pipeline: Text2Cypher
+
+The LPG pipeline generates comprehensive schema and metadata representations. The graph schema is defined with 79 unique node labels, 57 distinct relationship types, and 34,500+ nodes with average 6+ properties per label.
+
+4.2.1 Schema Provision
+
+The schema encodes the complete graph architecture including all node labels, properties, and both incoming and outgoing edge types for each node. Detailed descriptions of node and relationship labels provide semantic context.
+
+4.2.2 Query Generation
+
+Users pose natural language questions. The system generates Cypher queries traversing the graph to retrieve relevant data.
+
+4.2.3 Model Selection
+
+The authors evaluated neo4j/text-to-cypher-Gemma-3-27B-Instruct-2025.04.0 but found it unsatisfactory due to insufficient model power and incorrect relationship and node label selection. The final system uses OpenAI GPT-4.1 as the LLM backbone for text-to-Cypher translation.
+
+4.3 Agentic RAG Pipeline (RAG2 Baseline)
+
+This baseline pipeline converts structured data systematically: JSON data converts to RDF triplets, predicates translate to natural language, triplets become natural language sentences. Fund sentences are chunked and embedded using the BGE-m3 model (1,024-dimensional output, handles 8,192 tokens). Embeddings are stored in vector databases. The pipeline experiments with various chunk sizes, chunk overlap configurations, and different reranker models.
+
+Rerankers evaluated include BAAI/bge-reranker-v2-m3, BAAI/bge-reranker-v2-gemma, and cross-encoder/ms-marco-MiniLM-L6-v2.
+
+4.4 RAG1 Pipeline (Abandoned)
+
+An initial approach (RAG1) attempted JSON-to-narrative conversion but was abandoned due to incomplete information (key details omitted by the LLM), loss of context between sections, hallucination risk especially for numeric attributes, and processing time of roughly four days for the full dataset.
+
+5. Experiment Setup
+
+The researchers sampled approximately 200 questions spanning medium to very difficult complexity across four query intents: Search/Listing Intent (100 questions), Detail Intent (45 questions), Comparison Intent (45 questions), and Other Intent (10 questions).
+
+Vector database: Azure AI. LLM backbone: OpenAI GPT-4.1. RDF storage: Amazon Neptune with SPARQL. Alternative implementation: NetworkX with FAISS for in-memory operation.
+
+6. Results and Discussion
+
+6.1 Overall Performance
+
+Aggregated results (Total scores out of 200):
+- RAG2 (Agentic RAG): 116.0
+- RAG_RDF: 172.5
+- RAG_LPG: 185.5
+
+6.2 Detailed Breakdown by Intent
+
+Search/Listing Intent (100 questions):
+- LPG: 91 correct, 4 partial, 5 incorrect (Score: 93)
+- RDF: 70 correct, 20 partial, 10 incorrect (Score: 80)
+- RAG2: 23 correct, 31 partial, 45 incorrect (Score: 38.5)
+
+Compare Intent (45 questions):
+- LPG: 39 correct, 4 partial, 2 incorrect (Score: 41)
+- RDF: 37 correct, 8 partial, 0 incorrect (Score: 41)
+- RAG2: 32 correct, 6 partial, 7 incorrect (Score: 35)
+
+Detail Intent (45 questions):
+- LPG: 43 correct, 1 partial, 1 incorrect (Score: 43.5)
+- RDF: 42 correct, 3 partial, 0 incorrect (Score: 43.5)
+- RAG2: 33 correct, 3 partial, 9 incorrect (Score: 34.5)
+
+6.3 Key Insights
+
+Both LPG and RDF graph-based approaches significantly outperform the agentic RAG pipeline, particularly for search queries where LPG scored 93/100 versus RAG2's 38.5/100. The unknown search space problem is the primary challenge with agentic RAG: setting the number of documents to retrieve (K) is problematic. If K is too small, critical information is missed; if K is too large, the context becomes noisy.
+
+Embedding models may fail to capture fine-grained distinctions or may confuse similar names and concepts (e.g., mistaking CGCP for CGCB), resulting in retrieval of incorrect context.
+
+6.4 LPG vs RDF
+
+LPG's superior performance stems from its thoughtful schema design. By explicitly defining nodes, labels, and relationships, the graph can be optimized for multi-hop traversal and group similar attributes, reducing nodes and relationships and improving retrieval efficiency.
+
+LPG errors primarily arise from text-to-Cypher conversion confusion in selecting correct property or label names. RDF errors arise from selecting incorrect nodes and relationships derived directly from triplets rather than a carefully designed schema.
+
+7. Conclusion
+
+Both graph-based RAG representations significantly outperform agentic RAG, particularly in scenarios where the search space is unknown and the number of documents to retrieve cannot be predetermined. The text-to-Cypher model achieves over 90% accuracy. These findings establish Graph RAG as a transformative solution for next-generation retrieval-augmented systems.
+
+Technologies used: Amazon Neptune, NetworkX, FAISS, BGE-m3 embeddings, GPT-4.1, SPARQL, Cypher, Azure AI vector database, neo4j/text-to-cypher-Gemma-3-27B model, BAAI/bge-reranker-v2-m3, cross-encoder/ms-marco-MiniLM-L6-v2.

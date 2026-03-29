@@ -1,0 +1,65 @@
+# Custom Knowledge Graph: AI and Technology Domain
+# Format: head	relation	tail
+# ~50 triples covering entities, organizations, concepts, and technologies
+Python	is_a	Programming Language
+JavaScript	is_a	Programming Language
+Java	is_a	Programming Language
+Rust	is_a	Programming Language
+C++	is_a	Programming Language
+TypeScript	is_a	Programming Language
+R	is_a	Programming Language
+TensorFlow	is_a	ML Framework
+PyTorch	is_a	ML Framework
+scikit-learn	is_a	ML Framework
+Keras	is_a	ML Framework
+LangChain	is_a	AI Framework
+OpenAI	is_a	Company
+Google	is_a	Company
+Meta	is_a	Company
+Microsoft	is_a	Company
+Anthropic	is_a	Company
+NVIDIA	is_a	Company
+GPT-4	is_a	Large Language Model
+Claude	is_a	Large Language Model
+Gemini	is_a	Large Language Model
+LLaMA	is_a	Large Language Model
+BERT	is_a	Language Model
+Transformer	is_a	Architecture
+CNN	is_a	Architecture
+GNN	is_a	Architecture
+GPT-4	developed_by	OpenAI
+Claude	developed_by	Anthropic
+Gemini	developed_by	Google
+LLaMA	developed_by	Meta
+BERT	developed_by	Google
+TensorFlow	developed_by	Google
+PyTorch	developed_by	Meta
+Keras	developed_by	Google
+LangChain	developed_by	LangChain Inc
+TensorFlow	written_in	Python
+TensorFlow	written_in	C++
+PyTorch	written_in	Python
+PyTorch	written_in	C++
+scikit-learn	written_in	Python
+Python	used_for	Machine Learning
+Python	used_for	Data Science
+Python	used_for	Web Development
+R	used_for	Data Science
+JavaScript	used_for	Web Development
+Rust	used_for	Systems Programming
+Java	used_for	Enterprise Software
+Transformer	used_in	GPT-4
+Transformer	used_in	Claude
+Transformer	used_in	BERT
+Transformer	used_in	Gemini
+Transformer	used_in	LLaMA
+CNN	used_for	Computer Vision
+GNN	used_for	Graph Learning
+NVIDIA	produces	GPU
+GPU	used_for	Model Training
+Machine Learning	subfield_of	Artificial Intelligence
+Deep Learning	subfield_of	Machine Learning
+Natural Language Processing	subfield_of	Artificial Intelligence
+Computer Vision	subfield_of	Artificial Intelligence
+Graph Learning	subfield_of	Machine Learning
+Knowledge Graphs	subfield_of	Artificial Intelligence

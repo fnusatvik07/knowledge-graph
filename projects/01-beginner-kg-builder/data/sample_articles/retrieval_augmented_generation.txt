@@ -1,0 +1,15 @@
+Retrieval Augmented Generation: From Vectors to Graphs
+
+Retrieval Augmented Generation (RAG) is a technique that enhances large language models by providing them with relevant external knowledge retrieved from a document corpus. The concept was formalized by Patrick Lewis and colleagues at Meta AI (then Facebook AI Research) in their 2020 paper, which demonstrated that combining retrieval with generation significantly improved factual accuracy.
+
+The standard RAG pipeline works in three stages. First, documents are split into chunks and converted into vector embeddings using models like OpenAI's text-embedding-3-small or Cohere's embed-v3. These embeddings are stored in vector databases such as ChromaDB, Pinecone, or Weaviate. Second, when a user asks a question, the question is embedded and the most similar document chunks are retrieved using approximate nearest neighbor search. Third, the retrieved chunks are provided as context to the language model, which generates a grounded answer.
+
+While vector-based RAG excels at direct fact lookup, it struggles with questions requiring cross-document reasoning, multi-hop inference, and global summarization. This limitation motivated the development of Graph RAG approaches.
+
+Microsoft's GraphRAG, published in April 2024 by Darren Edge, Ha Trinh, and colleagues, addresses these limitations by constructing a knowledge graph from the document corpus. The system uses an LLM to extract entities and relationships from each text chunk, builds a graph, applies the Leiden community detection algorithm to identify clusters of related entities, and generates summaries at each level of the community hierarchy. GraphRAG supports three search modes: local search for entity-specific questions, global search for corpus-wide questions using community summaries, and DRIFT search which combines both approaches.
+
+LightRAG, introduced by Zirui Guo and Hong-Ning Dai at Hong Kong University, offers a more cost-effective alternative. LightRAG uses simpler entity extraction, a flat graph structure without community detection, and dual-mode retrieval combining graph traversal with vector similarity. It achieves 70-90% of GraphRAG's quality at approximately 1/100th of the cost.
+
+The LlamaIndex and LangChain frameworks have also integrated graph-based retrieval capabilities. LlamaIndex offers a PropertyGraphIndex for building and querying knowledge graphs, while LangGraph (the agent framework built on LangChain) enables building sophisticated graph-based RAG pipelines with multi-step reasoning.
+
+The current best practice, as of 2026, is hybrid retrieval: combining vector search for direct fact lookup with graph traversal for relationship reasoning. This approach leverages the speed of vector databases with the structural understanding of knowledge graphs.

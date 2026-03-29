@@ -1,0 +1,72 @@
+# GraphRAG configuration for Project 2
+# See https://microsoft.github.io/graphrag/config/yaml/ for full reference
+
+llm:
+  api_key: ${GRAPHRAG_API_KEY}  # Set via environment variable
+  type: openai_chat
+  model: gpt-4o-mini
+  max_tokens: 4000
+  temperature: 0.0
+  top_p: 1.0
+  request_timeout: 180.0
+  tokens_per_minute: 80000
+  requests_per_minute: 40
+  concurrent_requests: 10
+
+embeddings:
+  llm:
+    api_key: ${GRAPHRAG_API_KEY}
+    type: openai_embedding
+    model: text-embedding-3-small
+
+chunks:
+  size: 1200
+  overlap: 200
+  group_by_columns:
+    - id
+
+entity_extraction:
+  max_gleanings: 1
+  prompt: null  # Use default prompt
+  entity_types:
+    - organization
+    - person
+    - technology
+    - location
+    - event
+    - concept
+
+community_reports:
+  max_length: 2000
+  prompt: null  # Use default prompt
+
+claim_extraction:
+  enabled: false
+
+storage:
+  type: file
+  base_dir: output/graphrag
+
+reporting:
+  type: file
+  base_dir: output/graphrag/reports
+
+snapshots:
+  graphml: true
+  raw_entities: true
+  top_level_nodes: true
+
+local_search:
+  text_unit_prop: 0.5
+  community_prop: 0.1
+  conversation_history_max_turns: 5
+  top_k_mapped_entities: 10
+  top_k_relationships: 10
+  max_tokens: 12000
+
+global_search:
+  max_tokens: 12000
+  data_max_tokens: 12000
+  map_max_tokens: 1000
+  reduce_max_tokens: 2000
+  concurrency: 10

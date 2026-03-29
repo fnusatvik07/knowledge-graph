@@ -1,0 +1,32 @@
+{
+  "_comment": [
+    "MCP configuration for the official MCP Memory Server.",
+    "GitHub: https://github.com/modelcontextprotocol/servers/tree/main/src/memory",
+    "",
+    "The Memory MCP server provides a simple knowledge graph stored as JSONL.",
+    "It exposes tools for:",
+    "  - create_entities: Add new entities with observations",
+    "  - add_observations: Add facts to existing entities",
+    "  - create_relations: Link entities together",
+    "  - search_nodes: Find entities by query",
+    "  - open_nodes: Get full details for specific entities",
+    "  - delete_entities / delete_observations / delete_relations",
+    "",
+    "Add to Claude Code via CLI:",
+    "  claude mcp add memory -- npx -y @modelcontextprotocol/server-memory",
+    "",
+    "The MEMORY_FILE_PATH env var controls where the JSONL file is stored."
+  ],
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ],
+      "env": {
+        "MEMORY_FILE_PATH": "./data/memory_kg.jsonl"
+      }
+    }
+  }
+}

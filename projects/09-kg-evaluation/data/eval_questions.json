@@ -1,0 +1,145 @@
+{
+  "description": "Evaluation questions for benchmarking RAG systems. Organized by question type to assess different capabilities.",
+  "questions": [
+    {
+      "id": "factual_01",
+      "type": "factual",
+      "question": "Who is the CEO of NovaTech Inc.?",
+      "reference_answer": "Amanda Torres is the CEO of NovaTech Inc.",
+      "relevant_docs": ["doc_01"]
+    },
+    {
+      "id": "factual_02",
+      "type": "factual",
+      "question": "How much did NovaTech pay to acquire CloudPeak Solutions?",
+      "reference_answer": "NovaTech Inc. acquired CloudPeak Solutions for $1.8 billion.",
+      "relevant_docs": ["doc_01"]
+    },
+    {
+      "id": "factual_03",
+      "type": "factual",
+      "question": "Where was the 2026 Global Climate Summit held?",
+      "reference_answer": "The 2026 Global Climate Summit was held in Geneva, Switzerland.",
+      "relevant_docs": ["doc_03"]
+    },
+    {
+      "id": "factual_04",
+      "type": "factual",
+      "question": "What drug candidate did BioGenesis Pharmaceuticals test in Phase III trials?",
+      "reference_answer": "BioGenesis Pharmaceuticals tested BG-2847, an Alzheimer's drug candidate, in Phase III trials.",
+      "relevant_docs": ["doc_04"]
+    },
+    {
+      "id": "factual_05",
+      "type": "factual",
+      "question": "Who founded SpaceVentures Corp.?",
+      "reference_answer": "SpaceVentures Corp. was founded by billionaire entrepreneur Diana Kowalski.",
+      "relevant_docs": ["doc_05"]
+    },
+    {
+      "id": "multihop_01",
+      "type": "multi-hop",
+      "question": "Who is the CTO of the company that acquired CloudPeak Solutions, and what is their role in the acquisition?",
+      "reference_answer": "Marcus Wei is the CTO of NovaTech Inc., the company that acquired CloudPeak Solutions. He plans to oversee the integration of CloudPeak's distributed computing platform into NovaTech's existing product suite.",
+      "relevant_docs": ["doc_01"]
+    },
+    {
+      "id": "multihop_02",
+      "type": "multi-hop",
+      "question": "Which organization funded the quantum computing research at MIT, and who led that research?",
+      "reference_answer": "The National Science Foundation funded the quantum computing research at MIT with a $15 million grant. The research was led by Professor Elena Vasquez of the Department of Physics.",
+      "relevant_docs": ["doc_02"]
+    },
+    {
+      "id": "multihop_03",
+      "type": "multi-hop",
+      "question": "Who co-authored the Geneva Climate Accord and what organizations do they belong to?",
+      "reference_answer": "The Geneva Climate Accord was co-authored by Dr. James Thornton of the World Resources Institute and Professor Amara Diallo from the University of Nairobi.",
+      "relevant_docs": ["doc_03"]
+    },
+    {
+      "id": "multihop_04",
+      "type": "multi-hop",
+      "question": "Which hospitals were involved in the trial for the drug developed by the company where Michael Strauss is CEO?",
+      "reference_answer": "Michael Strauss is CEO of BioGenesis Pharmaceuticals, which developed BG-2847. The Phase III trial was conducted at Johns Hopkins Hospital and Mayo Clinic, among other hospitals.",
+      "relevant_docs": ["doc_04"]
+    },
+    {
+      "id": "multihop_05",
+      "type": "multi-hop",
+      "question": "What NASA mission is the company that launched from Cape Canaveral contracted for, and who is the NASA administrator?",
+      "reference_answer": "SpaceVentures Corp., which launched its Falcon Nova rocket from Cape Canaveral, has been selected as a contractor for the Artemis IV mission. The NASA Administrator is Dr. Karen Mitchell.",
+      "relevant_docs": ["doc_05"]
+    },
+    {
+      "id": "global_01",
+      "type": "global",
+      "question": "Across all the documents, which organizations are involved in acquisition or partnership deals?",
+      "reference_answer": "NovaTech Inc. acquired CloudPeak Solutions (brokered by Pinnacle Advisors). IBM Quantum partnered with MIT. SpaceVentures Corp. partnered with the European Space Agency and was contracted by NASA for Artemis IV. SpaceVentures also has TeleGlobal Networks as a client.",
+      "relevant_docs": ["doc_01", "doc_02", "doc_05"]
+    },
+    {
+      "id": "global_02",
+      "type": "global",
+      "question": "List all the CEOs mentioned across all documents and their respective organizations.",
+      "reference_answer": "Amanda Torres is CEO of NovaTech Inc. Michael Strauss is CEO of BioGenesis Pharmaceuticals. Raj Sharma is CEO of TeleGlobal Networks.",
+      "relevant_docs": ["doc_01", "doc_04", "doc_05"]
+    },
+    {
+      "id": "global_03",
+      "type": "global",
+      "question": "What are all the locations mentioned across the documents and what events or organizations are associated with each?",
+      "reference_answer": "San Francisco (NovaTech Inc. HQ), Seattle (CloudPeak Solutions founded), Geneva/Switzerland (2026 Global Climate Summit), Boston/Massachusetts (BioGenesis Pharmaceuticals HQ), Cape Canaveral/Florida (SpaceVentures launch site), London (TeleGlobal Networks HQ).",
+      "relevant_docs": ["doc_01", "doc_03", "doc_04", "doc_05"]
+    },
+    {
+      "id": "global_04",
+      "type": "global",
+      "question": "What types of funding or financial transactions are described across all documents?",
+      "reference_answer": "NovaTech acquired CloudPeak for $1.8 billion. NSF provided a $15 million grant for MIT quantum research. China announced a $50 billion green energy fund. BioGenesis received funding from the Alzheimer's Research Foundation. SpaceVentures was contracted for NASA's Artemis IV.",
+      "relevant_docs": ["doc_01", "doc_02", "doc_03", "doc_04", "doc_05"]
+    },
+    {
+      "id": "global_05",
+      "type": "global",
+      "question": "Summarize the key scientific and technological breakthroughs described across all documents.",
+      "reference_answer": "MIT researchers achieved a quantum error correction breakthrough using topological qubits that reduces error rates by 90%. BioGenesis Pharmaceuticals reported positive Phase III results for Alzheimer's drug BG-2847. SpaceVentures successfully launched the Falcon Nova rocket with a revolutionary ion propulsion system designed by Alex Yamamoto.",
+      "relevant_docs": ["doc_02", "doc_04", "doc_05"]
+    },
+    {
+      "id": "comparison_01",
+      "type": "comparison",
+      "question": "Compare the leadership structures of NovaTech Inc. and BioGenesis Pharmaceuticals.",
+      "reference_answer": "NovaTech Inc. is led by CEO Amanda Torres with CTO Marcus Wei overseeing technology integration. BioGenesis Pharmaceuticals is led by CEO Michael Strauss with Dr. Patricia Nguyen as lead researcher. Both are major organizations but operate in different sectors (enterprise software vs pharmaceuticals).",
+      "relevant_docs": ["doc_01", "doc_04"]
+    },
+    {
+      "id": "comparison_02",
+      "type": "comparison",
+      "question": "How do the partnership models differ between the MIT quantum computing project and the SpaceVentures-ESA collaboration?",
+      "reference_answer": "MIT's quantum computing project is primarily a research partnership with IBM Quantum, funded by a government grant from the National Science Foundation. SpaceVentures' partnership with the European Space Agency is a commercial-governmental space exploration collaboration. MIT's is academically focused while SpaceVentures' is commercially driven.",
+      "relevant_docs": ["doc_02", "doc_05"]
+    },
+    {
+      "id": "comparison_03",
+      "type": "comparison",
+      "question": "Compare the financial scale of the NovaTech-CloudPeak acquisition versus China's green energy investment announced at the climate summit.",
+      "reference_answer": "NovaTech's acquisition of CloudPeak Solutions is valued at $1.8 billion, a corporate M&A deal. China's green energy investment fund is $50 billion, roughly 28 times larger, but represents a national-level government initiative rather than a single corporate transaction.",
+      "relevant_docs": ["doc_01", "doc_03"]
+    },
+    {
+      "id": "comparison_04",
+      "type": "comparison",
+      "question": "Compare how Dr. Patricia Nguyen's role at BioGenesis differs from Professor Elena Vasquez's role at MIT.",
+      "reference_answer": "Dr. Patricia Nguyen is the lead researcher at BioGenesis Pharmaceuticals conducting pharmaceutical clinical trials (Phase III for BG-2847). Professor Elena Vasquez leads fundamental physics research at MIT in quantum error correction. Nguyen works in an industry/clinical setting while Vasquez is in academia. Both are lead researchers but in very different domains.",
+      "relevant_docs": ["doc_02", "doc_04"]
+    },
+    {
+      "id": "comparison_05",
+      "type": "comparison",
+      "question": "Compare the international scope of the Global Climate Summit with SpaceVentures' partnerships.",
+      "reference_answer": "The 2026 Global Climate Summit involved 45 countries, the UN, EU, and China, representing broad multilateral diplomacy. SpaceVentures has bilateral partnerships with the European Space Agency and NASA, plus a commercial relationship with London-based TeleGlobal Networks. The summit is broader in scope (global policy) while SpaceVentures' partnerships are more targeted (commercial space).",
+      "relevant_docs": ["doc_03", "doc_05"]
+    }
+  ]
+}

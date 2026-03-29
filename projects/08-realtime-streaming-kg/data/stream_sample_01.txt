@@ -1,0 +1,9 @@
+TechCorp Announces Acquisition of DataStream AI for $2.3 Billion
+
+SAN FRANCISCO, March 2026 — TechCorp Inc., the leading enterprise software company headquartered in San Francisco, today announced its definitive agreement to acquire DataStream AI, a startup specializing in real-time data processing and machine learning infrastructure. The acquisition is valued at approximately $2.3 billion in a mix of cash and stock.
+
+DataStream AI, founded in 2022 by CEO Maria Chen and CTO James Park, has built a platform that processes over 50 million events per second for clients including GlobalBank, RetailMax, and HealthFirst Systems. The company employs 450 people across offices in Austin, Texas and London, United Kingdom.
+
+TechCorp CEO Robert Zhang stated that the acquisition will strengthen their cloud analytics division. "DataStream's real-time processing capabilities perfectly complement our existing enterprise platform," Zhang said during the press conference. Sarah Liu, TechCorp's Chief Technology Officer, will oversee the integration of DataStream's technology into TechCorp's cloud infrastructure.
+
+The deal is expected to close in Q3 2026, pending regulatory approval from the Federal Trade Commission. Goldman Sachs served as financial advisor to TechCorp, while Morgan Stanley advised DataStream AI on the transaction.

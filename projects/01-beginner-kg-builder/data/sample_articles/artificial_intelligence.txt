@@ -1,0 +1,11 @@
+Artificial Intelligence: A Brief Overview
+
+Artificial intelligence (AI) is a branch of computer science that aims to create intelligent machines capable of performing tasks that typically require human intelligence. The field was founded at a workshop at Dartmouth College in 1956, organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon.
+
+Modern AI is largely driven by machine learning, a subset of AI where systems learn patterns from data rather than being explicitly programmed. Deep learning, a further subset of machine learning, uses neural networks with many layers to learn hierarchical representations of data. Geoffrey Hinton, Yann LeCun, and Yoshua Bengio are considered the "godfathers of deep learning" and received the Turing Award in 2018 for their foundational work.
+
+The transformer architecture, introduced by researchers at Google in their 2017 paper "Attention Is All You Need," revolutionized natural language processing. This architecture forms the basis of large language models (LLMs) such as GPT-4 developed by OpenAI, Claude developed by Anthropic, and Gemini developed by Google DeepMind.
+
+OpenAI, founded in 2015 by Sam Altman, Elon Musk, and others, has been at the forefront of LLM development. Anthropic, founded in 2021 by Dario Amodei and Daniela Amodei, focuses on AI safety research alongside developing frontier AI systems. Google DeepMind, formed from the merger of Google Brain and DeepMind in 2023, is led by Demis Hassabis.
+
+Key applications of AI include natural language processing, computer vision, robotics, healthcare diagnostics, autonomous vehicles, and scientific discovery. The field continues to advance rapidly, with researchers working on challenges such as reasoning, planning, and alignment of AI systems with human values.

@@ -1,0 +1,9 @@
+The History of Artificial Intelligence
+
+Artificial Intelligence (AI) has its roots in the 1950s when pioneers like Alan Turing, John McCarthy, and Marvin Minsky laid the theoretical foundations. Turing proposed the famous Turing Test in 1950 as a measure of machine intelligence. In 1956, the Dartmouth Conference, organized by McCarthy, formally established AI as a field of study. Early AI research focused on symbolic reasoning, logic, and search algorithms.
+
+The 1960s and 1970s saw the development of expert systems like DENDRAL and MYCIN, which encoded human expertise in rule-based systems. However, the limitations of these approaches led to the first "AI Winter" in the 1970s when funding dried up due to unmet expectations.
+
+The revival came with machine learning in the 1980s and 1990s, particularly with neural networks and statistical methods. Geoffrey Hinton, Yann LeCun, and Yoshua Bengio pioneered deep learning techniques that would later revolutionize the field. The IBM Deep Blue system defeated chess champion Garry Kasparov in 1997, marking a milestone in AI capabilities.
+
+The modern era of AI began around 2012 when deep learning achieved breakthrough results in image recognition (AlexNet by Alex Krizhevsky). This was followed by advances in natural language processing with the introduction of the Transformer architecture by Google researchers in 2017. Companies like OpenAI, DeepMind (acquired by Google), Anthropic, and Meta have since developed increasingly powerful large language models including GPT-4, Gemini, Claude, and LLaMA. The field continues to advance rapidly, with debates ongoing about artificial general intelligence (AGI) and AI safety.

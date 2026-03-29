@@ -1,0 +1,13 @@
+Graph Databases and Knowledge Graphs
+
+Graph databases are database management systems that use graph structures for storing, mapping, and querying relationships between data. Unlike relational databases that use tables and joins, graph databases use nodes, edges, and properties to represent and store data natively as a graph.
+
+Neo4j, developed by Neo4j Inc. (formerly Neo Technology), is the most popular graph database in the world. Founded in 2007 in Sweden, Neo4j uses the Cypher query language, which was designed specifically for querying graph data. Neo4j stores data as a property graph, where both nodes and edges can have key-value properties attached to them.
+
+Other notable graph databases include Amazon Neptune (a managed graph database service by AWS), Apache TinkerPop (an open-source graph computing framework maintained by the Apache Software Foundation), and Memgraph (an in-memory graph database optimized for real-time analytics).
+
+Knowledge graphs are a specific application of graph databases where nodes represent real-world entities and edges represent relationships between those entities. Google launched its Knowledge Graph in 2012, which powers the information panels that appear in Google Search results. Wikidata, maintained by the Wikimedia Foundation, is one of the largest open knowledge graphs with over 100 million items.
+
+In the context of AI and large language models, knowledge graphs have become essential for Retrieval Augmented Generation (RAG). Microsoft Research published the GraphRAG paper in April 2024, introducing a method that uses knowledge graphs and community detection to significantly improve answer quality compared to traditional vector-based RAG. The open-source graphrag library has since become a standard tool for building graph-based RAG systems.
+
+Graph databases are also widely used in fraud detection (analyzing transaction networks), recommendation systems (connecting users to products through shared attributes), social network analysis, and supply chain management.

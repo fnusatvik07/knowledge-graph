@@ -1,0 +1,88 @@
+{
+  "entities": [
+    {"id": "openai", "type": "Company", "name": "OpenAI", "founded": 2015, "headquarters": "San Francisco", "sector": "AI Research"},
+    {"id": "anthropic", "type": "Company", "name": "Anthropic", "founded": 2021, "headquarters": "San Francisco", "sector": "AI Safety"},
+    {"id": "google", "type": "Company", "name": "Google", "founded": 1998, "headquarters": "Mountain View", "sector": "Technology"},
+    {"id": "meta", "type": "Company", "name": "Meta", "founded": 2004, "headquarters": "Menlo Park", "sector": "Social Media"},
+    {"id": "microsoft", "type": "Company", "name": "Microsoft", "founded": 1975, "headquarters": "Redmond", "sector": "Technology"},
+    {"id": "nvidia", "type": "Company", "name": "NVIDIA", "founded": 1993, "headquarters": "Santa Clara", "sector": "Semiconductors"},
+    {"id": "mistral", "type": "Company", "name": "Mistral AI", "founded": 2023, "headquarters": "Paris", "sector": "AI Research"},
+    {"id": "cohere", "type": "Company", "name": "Cohere", "founded": 2019, "headquarters": "Toronto", "sector": "AI Research"},
+    {"id": "deepmind", "type": "Company", "name": "DeepMind", "founded": 2010, "headquarters": "London", "sector": "AI Research"},
+    {"id": "huggingface", "type": "Company", "name": "Hugging Face", "founded": 2016, "headquarters": "New York", "sector": "AI Platform"},
+
+    {"id": "gpt4", "type": "Model", "name": "GPT-4", "release_year": 2023, "parameters": "1.8T", "modality": "multimodal"},
+    {"id": "gpt4o", "type": "Model", "name": "GPT-4o", "release_year": 2024, "parameters": "unknown", "modality": "multimodal"},
+    {"id": "claude3", "type": "Model", "name": "Claude 3", "release_year": 2024, "parameters": "unknown", "modality": "multimodal"},
+    {"id": "gemini", "type": "Model", "name": "Gemini", "release_year": 2023, "parameters": "unknown", "modality": "multimodal"},
+    {"id": "llama3", "type": "Model", "name": "Llama 3", "release_year": 2024, "parameters": "70B", "modality": "text"},
+    {"id": "mixtral", "type": "Model", "name": "Mixtral 8x7B", "release_year": 2023, "parameters": "46.7B", "modality": "text"},
+    {"id": "command_r", "type": "Model", "name": "Command R+", "release_year": 2024, "parameters": "104B", "modality": "text"},
+    {"id": "alphafold", "type": "Model", "name": "AlphaFold", "release_year": 2020, "parameters": "unknown", "modality": "protein"},
+
+    {"id": "transformer", "type": "Architecture", "name": "Transformer", "year_introduced": 2017, "paper": "Attention Is All You Need"},
+    {"id": "moe", "type": "Architecture", "name": "Mixture of Experts", "year_introduced": 1991, "paper": "Adaptive Mixtures of Local Experts"},
+    {"id": "rlhf", "type": "Technique", "name": "RLHF", "year_introduced": 2017, "paper": "Deep Reinforcement Learning from Human Preferences"},
+    {"id": "rag", "type": "Technique", "name": "RAG", "year_introduced": 2020, "paper": "Retrieval-Augmented Generation"},
+    {"id": "constitutional_ai", "type": "Technique", "name": "Constitutional AI", "year_introduced": 2022, "paper": "Constitutional AI: Harmlessness from AI Feedback"},
+
+    {"id": "pytorch", "type": "Framework", "name": "PyTorch", "language": "Python", "maintainer": "Meta"},
+    {"id": "tensorflow", "type": "Framework", "name": "TensorFlow", "language": "Python", "maintainer": "Google"},
+    {"id": "jax", "type": "Framework", "name": "JAX", "language": "Python", "maintainer": "Google"},
+    {"id": "langchain", "type": "Framework", "name": "LangChain", "language": "Python", "maintainer": "LangChain Inc"},
+    {"id": "llamaindex", "type": "Framework", "name": "LlamaIndex", "language": "Python", "maintainer": "LlamaIndex Inc"},
+
+    {"id": "a100", "type": "Hardware", "name": "A100 GPU", "manufacturer": "NVIDIA", "memory": "80GB"},
+    {"id": "h100", "type": "Hardware", "name": "H100 GPU", "manufacturer": "NVIDIA", "memory": "80GB"}
+  ],
+  "relationships": [
+    {"source": "openai", "target": "gpt4", "type": "DEVELOPED", "year": 2023},
+    {"source": "openai", "target": "gpt4o", "type": "DEVELOPED", "year": 2024},
+    {"source": "anthropic", "target": "claude3", "type": "DEVELOPED", "year": 2024},
+    {"source": "google", "target": "gemini", "type": "DEVELOPED", "year": 2023},
+    {"source": "meta", "target": "llama3", "type": "DEVELOPED", "year": 2024},
+    {"source": "mistral", "target": "mixtral", "type": "DEVELOPED", "year": 2023},
+    {"source": "cohere", "target": "command_r", "type": "DEVELOPED", "year": 2024},
+    {"source": "deepmind", "target": "alphafold", "type": "DEVELOPED", "year": 2020},
+
+    {"source": "microsoft", "target": "openai", "type": "INVESTED_IN", "amount": "$13B", "year": 2023},
+    {"source": "google", "target": "anthropic", "type": "INVESTED_IN", "amount": "$2B", "year": 2023},
+    {"source": "google", "target": "deepmind", "type": "ACQUIRED", "year": 2014},
+
+    {"source": "gpt4", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "claude3", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "gemini", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "llama3", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "mixtral", "target": "moe", "type": "USES_ARCHITECTURE"},
+    {"source": "mixtral", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "gpt4o", "target": "transformer", "type": "USES_ARCHITECTURE"},
+    {"source": "command_r", "target": "transformer", "type": "USES_ARCHITECTURE"},
+
+    {"source": "gpt4", "target": "rlhf", "type": "TRAINED_WITH"},
+    {"source": "claude3", "target": "rlhf", "type": "TRAINED_WITH"},
+    {"source": "claude3", "target": "constitutional_ai", "type": "TRAINED_WITH"},
+    {"source": "command_r", "target": "rag", "type": "OPTIMIZED_FOR"},
+
+    {"source": "meta", "target": "pytorch", "type": "MAINTAINS"},
+    {"source": "google", "target": "tensorflow", "type": "MAINTAINS"},
+    {"source": "google", "target": "jax", "type": "MAINTAINS"},
+
+    {"source": "nvidia", "target": "a100", "type": "MANUFACTURES"},
+    {"source": "nvidia", "target": "h100", "type": "MANUFACTURES"},
+    {"source": "gpt4", "target": "a100", "type": "TRAINED_ON"},
+    {"source": "llama3", "target": "h100", "type": "TRAINED_ON"},
+
+    {"source": "openai", "target": "microsoft", "type": "PARTNERS_WITH"},
+    {"source": "anthropic", "target": "google", "type": "PARTNERS_WITH"},
+    {"source": "huggingface", "target": "llama3", "type": "HOSTS"},
+    {"source": "huggingface", "target": "mixtral", "type": "HOSTS"},
+
+    {"source": "langchain", "target": "gpt4", "type": "INTEGRATES"},
+    {"source": "langchain", "target": "claude3", "type": "INTEGRATES"},
+    {"source": "llamaindex", "target": "gpt4", "type": "INTEGRATES"},
+    {"source": "llamaindex", "target": "claude3", "type": "INTEGRATES"},
+
+    {"source": "gpt4o", "target": "gpt4", "type": "SUCCESSOR_OF"},
+    {"source": "h100", "target": "a100", "type": "SUCCESSOR_OF"}
+  ]
+}
